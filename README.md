@@ -90,9 +90,9 @@ In this exercise you will:
 
 #### Reflection Questions
 
-1. **How do you link `prev` and `next` pointers correctly using a static array?**
-2. **What are advantages and limitations of compile-time vs. dynamic allocation?**
-3. **How would you extend this static list to include additional data fields?**
+1. **How do you link `prev` and `next` pointers correctly using a static array?** *To link prev and next correct, we have to create another two pointers for every element of the array (exept for the first and last element) one pointing on the next element (called next), and one pointing on the previous element. In our case we created a new type, called DNode, wich fits 3 arrays, one for the data, and two for prev and next. We could also create three seperate arrays, but like this they're easier to work with. So now we could use the information of what comes next to use them as conditions for our code.*  
+2. **What are advantages and limitations of compile-time vs. dynamic allocation?** *Compile-time allocation is relativly easy and fast to use and there is not that much potential of error. But you also have to know how big your arguments are, there is no possibility of making them larger or smaller than they are. Dynamic allocation is flexible ,you are able to create structures with an unknown dimension. But it's also harder to programm and slower.*
+3. **How would you extend this static list to include additional data fields?** *I think I would create another 3 fields inside our type (one for data2 and using also a prev2 and next pointer2). However this doesen't sound efficient to me, but I don't know any other solution yet.*
 
 ---
 
