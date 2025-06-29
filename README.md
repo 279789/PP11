@@ -158,9 +158,9 @@ In this exercise you will:
 
 #### Reflection Questions
 
-1. **Why is `malloc` necessary when adding nodes dynamically?**
-2. **How can you traverse the list to print each node’s address and value?**
-3. **What are the consequences of not freeing the list before exit?**
+1. **Why is `malloc` necessary when adding nodes dynamically?** *Malloc is deffinetly necessary, because it does reserve memory. In our case malloc does reserve more memory for every node that we add. This important, because otherwise we would have no place where we could store our node. This methode gives us the oppertunity to create an array that is as big as we need while runtime.* 
+2. **How can you traverse the list to print each node’s address and value?** *This could be achieved relativly simple. First we need a for loop in that we define a new pointer to the first element of SNode. In our case the pointer is p. Than we need an leave argument for the loop, it would make sens to use the pointer, because he is as long not NULL as he points on an adress. Last but not least we define p=p->next, so that our pointer jumps to the next adress at the end of the loop. Now we only have to print the adress with %p and the value of that node with %d using in both cases our pointer.*
+3. **What are the consequences of not freeing the list before exit?** *In our case wouldn't happen that much, because the OS does free the memory if the programm isn't used anymore. But if we would have a programm that is ment to run all the time, we'll have a big problem. Because with every malloc use we reserve more memory, but none is set free, so that our program takes more and more memory.*
 
 ---
 
