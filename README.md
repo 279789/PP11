@@ -90,9 +90,9 @@ In this exercise you will:
 
 #### Reflection Questions
 
-1. **How do you link `prev` and `next` pointers correctly using a static array?**
-2. **What are advantages and limitations of compile-time vs. dynamic allocation?**
-3. **How would you extend this static list to include additional data fields?**
+1. **How do you link `prev` and `next` pointers correctly using a static array?** *To link prev and next correct, we have to create another two pointers for every element of the array (exept for the first and last element) one pointing on the next element (called next), and one pointing on the previous element. In our case we created a new type, called DNode, wich fits 3 arrays, one for the data, and two for prev and next. We could also create three seperate arrays, but like this they're easier to work with. So now we could use the information of what comes next to use them as conditions for our code.*  
+2. **What are advantages and limitations of compile-time vs. dynamic allocation?** *Compile-time allocation is relativly easy and fast to use and there is not that much potential of error. But you also have to know how big your arguments are, there is no possibility of making them larger or smaller than they are. Dynamic allocation is flexible ,you are able to create structures with an unknown dimension. But it's also harder to programm and slower.*
+3. **How would you extend this static list to include additional data fields?** *I think I would create another 3 fields inside our type (one for data2 and using also a prev2 and next pointer2). However this doesen't sound efficient to me, but I don't know any other solution yet.*
 
 ---
 
@@ -158,9 +158,9 @@ In this exercise you will:
 
 #### Reflection Questions
 
-1. **Why is `malloc` necessary when adding nodes dynamically?**
-2. **How can you traverse the list to print each node’s address and value?**
-3. **What are the consequences of not freeing the list before exit?**
+1. **Why is `malloc` necessary when adding nodes dynamically?** *Malloc is deffinetly necessary, because it does reserve memory. In our case malloc does reserve more memory for every node that we add. This important, because otherwise we would have no place where we could store our node. This methode gives us the oppertunity to create an array that is as big as we need while runtime.* 
+2. **How can you traverse the list to print each node’s address and value?** *This could be achieved relativly simple. First we need a for loop in that we define a new pointer to the first element of SNode. In our case the pointer is p. Than we need an leave argument for the loop, it would make sens to use the pointer, because he is as long not NULL as he points on an adress. Last but not least we define p=p->next, so that our pointer jumps to the next adress at the end of the loop. Now we only have to print the adress with %p and the value of that node with %d using in both cases our pointer.*
+3. **What are the consequences of not freeing the list before exit?** *In our case wouldn't happen that much, because the OS does free the memory if the programm isn't used anymore. But if we would have a programm that is ment to run all the time, we'll have a big problem. Because with every malloc use we reserve more memory, but none is set free, so that our program takes more and more memory.*
 
 ---
 
@@ -243,9 +243,9 @@ gcc -o solutions/json_main solutions/json_main.c solutions/json_list.o -ljansson
 
 #### Reflection Questions
 
-1. **How does using `getopt` make the program more flexible than `argv[1]`?**
-2. **What happens if the user omits the `-i` option?**
-3. **How can you validate that the JSON file loaded is indeed an array?**
+1. **How does using `getopt` make the program more flexible than `argv[1]`?** *Getopt is a very usefull tool, that helps the pprogramm to understand what an flag is and what an filename is. Other wise it would be also possible to use argc and argv regularly, but it gets very fast very complexe if you want to differ between several files and flags.*
+2. **What happens if the user omits the `-i` option?** *When I omit the -i flag, than else is used, which causes the program to execute the usage function , which does print a reminder to use -i and exits the program.*
+3. **How can you validate that the JSON file loaded is indeed an array?** *This is possible with the function json_is_array(file). If the function returns 1 it's an array, if not than not.*
 
 ---
 
