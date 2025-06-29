@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Erik",
+		"age": 52,
+		"email":"test@test.com"
+	},
+
+        {
+                "name": "Arik",
+                "age": 12,
+		"email":"qest@test.com"
+        },
+
+        {
+                "name": "Brik",
+                "age": 34,
+		"email":"west@test.com"
+        },
+
+        {
+                "name": "Crik",
+                "age": 56,
+		"email":"eest@test.com"
+        },
+
+        {
+                "name": "Drik",
+                "age": 78,
+		"email":"rest@test.com"
+        },
+
+        {
+                "name": "Erik",
+                "age": 90,
+		"email":"test@test.com"
+        }
+]
