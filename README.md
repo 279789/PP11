@@ -243,9 +243,9 @@ gcc -o solutions/json_main solutions/json_main.c solutions/json_list.o -ljansson
 
 #### Reflection Questions
 
-1. **How does using `getopt` make the program more flexible than `argv[1]`?**
-2. **What happens if the user omits the `-i` option?**
-3. **How can you validate that the JSON file loaded is indeed an array?**
+1. **How does using `getopt` make the program more flexible than `argv[1]`?** *Getopt is a very usefull tool, that helps the pprogramm to understand what an flag is and what an filename is. Other wise it would be also possible to use argc and argv regularly, but it gets very fast very complexe if you want to differ between several files and flags.*
+2. **What happens if the user omits the `-i` option?** *When I omit the -i flag, than else is used, which causes the program to execute the usage function , which does print a reminder to use -i and exits the program.*
+3. **How can you validate that the JSON file loaded is indeed an array?** *This is possible with the function json_is_array(file). If the function returns 1 it's an array, if not than not.*
 
 ---
 
