@@ -1,6 +1,6 @@
 # PP11
 
-## Goal
+### This PP was not nice, I wish that nexttime all of the needed skills are teached preaviously. However in some PPs there was always a prerequisitory directory with several other repos, that teached every needed skill very well, that was good because if you want to understand sth. you are able to learn it, but in this case it was very frustrating for me to do this stuff. Not only because we use malloc and jansson (that we have never used before in this way), but also because we had to write functions that are much more complex than in the previous tasks. I understand that you want us to learn hard, but this is just frustrating. I worked many hours on this doing research and I wouldn't even be able to re-do this tasks on my own. (For the paperwork, ofcourse I did everything in 90 minutes)
 
 In this exercise you will:
 
